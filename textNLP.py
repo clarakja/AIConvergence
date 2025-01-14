@@ -7,10 +7,6 @@ import nltk
 from nltk.corpus import stopwords
 import string
 
-# Stopwords and punctuation for preprocessing
-stop_words = set(stopwords.words('english'))
-punctuation = set(string.punctuation)
-
 def preprocess_text(text):
     """Cleans and tokenizes the text."""
     # Ensure necessary data is downloaded
@@ -44,6 +40,10 @@ st.write("이 애플리케이션은 자연어 처리를 통해 텍스트 전처�
 
 # Text input
 user_text = st.text_area("분석할 텍스트를 입력하세요:", height=200)
+
+# Stopwords and punctuation for preprocessing
+stop_words = set(stopwords.words('english'))
+punctuation = set(string.punctuation)
 
 if st.button("분석 실행"):
     if user_text.strip():
