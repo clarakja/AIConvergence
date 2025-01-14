@@ -7,16 +7,15 @@ import nltk
 from nltk.corpus import stopwords
 import string
 
-# Ensure necessary data is downloaded
-nltk.download('stopwords')
-nltk.download('punkt')
-
 # Stopwords and punctuation for preprocessing
 stop_words = set(stopwords.words('english'))
 punctuation = set(string.punctuation)
 
 def preprocess_text(text):
     """Cleans and tokenizes the text."""
+    # Ensure necessary data is downloaded
+    nltk.download('stopwords')
+    nltk.download('punkt', quiet=True)
     tokens = nltk.word_tokenize(text)
     tokens = [word.lower() for word in tokens if word.lower() not in stop_words and word not in punctuation]
     return tokens
