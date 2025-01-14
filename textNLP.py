@@ -10,8 +10,8 @@ import string
 def preprocess_text(text):
     """Cleans and tokenizes the text."""
     # Ensure necessary data is downloaded
-    nltk.download('stopwords')
     nltk.download('punkt', quiet=True)
+    nltk.download('stopwords', quiet=True)
 
     # Stopwords and punctuation for preprocessing
     stop_words = set(stopwords.words('english'))
