@@ -4,3 +4,4 @@ wordcloud
 nltk
 matplotlib
 pandas
+TextBlob
