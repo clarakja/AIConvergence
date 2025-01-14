@@ -1,7 +1,7 @@
 streamlit
+nltk
 scikit-learn
 wordcloud
-nltk
 matplotlib
 pandas
 TextBlob
