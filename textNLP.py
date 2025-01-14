@@ -1,10 +1,10 @@
 import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
+import nltk
+from nltk.corpus import stopwords
 from wordcloud import WordCloud
 from textblob import TextBlob
 import matplotlib.pyplot as plt
-import nltk
-from nltk.corpus import stopwords
 import string
 
 def preprocess_text(text):
